@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweeter Replica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <i class="fab fa-twitter"></i>
+        <span>Tweeter</span>
+    </nav>
+
+    <main class="container">
+        <section class="tweet-input-card">
+            <div class="profile-photo"></div> <div class="input-section">
+                <textarea id="tweet-text" placeholder="What's happening?"></textarea> <div class="input-controls">
+                    <span id="char-count">160 characters remaining</span> <button id="tweet-btn" disabled>tweeet</button> </div>
+            </div>
+        </section>
+
+        <section class="sample-tweet">
+            <div class="profile-photo"></div>
+            <div class="tweet-content">
+                <div class="tweet-header">
+                    <strong>Jonatan Reyes</strong> <span>@jonatan_utrgv · Feb 25</span>
+                </div>
+                <p class="tweet-text">Hey, CSCI 3342 is cool!</p>
+                <div class="tweet-icons">
+                    <i class="far fa-comment"></i>
+                    <i class="fas fa-retweet"></i>
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-upload"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
