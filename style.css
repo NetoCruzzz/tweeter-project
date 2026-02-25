@@ -1,104 +1,140 @@
-/* Part 2: Styling and Responsiveness [cite: 14, 15] */
+/* Part 2: CSS Styling & Responsiveness [cite: 14] */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    background-color: white; /* [cite: 15] */
+    background-color: #f0f7ff; /* Light blue background tone  */
 }
 
-/* 100% Viewport Width Nav [cite: 16] */
+/* Navbar stays 100% width [cite: 16] */
 .navbar {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     background-color: white;
-    border-bottom: 1px solid #e1e8ed;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #1da1f2; /* Light blue [cite: 15] */
-    font-size: 1.5rem;
-    position: sticky;
-    top: 0;
+    color: #1da1f2;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-bottom: 1px solid #e1e8ed;
 }
 
-.navbar i { margin-right: 10px; }
+.navbar i { margin-right: 8px; }
 
+/* The Centered Card from the image */
 .container {
     max-width: 600px;
-    margin: 20px auto;
-    padding: 10px; /* [cite: 17] */
+    margin: 40px auto;
+    background-color: white; /* White background for the card  */
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
 }
 
-.tweet-input-card, .sample-tweet {
+.tweet-input-card {
+    padding: 20px;
     display: flex;
-    padding: 15px;
-    border-bottom: 1px solid #e1e8ed;
+    border-bottom: 1px solid #f0f3f5;
 }
 
 /* Gray circle photo holder [cite: 10] */
 .profile-photo {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     background-color: #ccd6dd;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-right: 12px;
     flex-shrink: 0;
 }
 
 .input-section { flex-grow: 1; }
 
+/* Styling the textarea to match image */
 textarea {
     width: 100%;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     resize: none;
     outline: none;
-    margin-bottom: 10px;
+    padding: 10px 0;
+    color: #657786;
 }
 
 .input-controls {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    border-top: 1px solid #e1e8ed;
     padding-top: 10px;
 }
 
 #char-count {
     margin-right: 15px;
+    font-weight: bold;
     font-size: 0.9rem;
-    color: #657786;
+    color: #333; /* Darker like the image [cite: 31] */
 }
 
-/* Rounded button with states [cite: 12, 18] */
+/* Rounded blue button [cite: 18] */
 #tweet-btn {
     background-color: #1da1f2;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: 8px 20px;
+    border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
+    font-size: 0.9rem;
 }
 
 #tweet-btn:hover { background-color: #1a91da; }
-#tweet-btn:active { transform: scale(0.95); }
-#tweet-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+#tweet-btn:disabled { opacity: 0.5; }
 
-/* Icons [cite: 13] */
-.tweet-icons {
+/* Sample Tweet Styling */
+.sample-tweet {
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
-    max-width: 300px;
-    margin-top: 10px;
-    color: #657786;
 }
 
-/* Responsive Media Query [cite: 19, 20] */
-@media (max-width: 600px) {
-    .container { width: 100%; }
+.tweet-header {
+    margin-bottom: 5px;
+}
+
+.tweet-header strong {
+    color: #000;
+}
+
+.tweet-header span {
+    color: #657786;
+    margin-left: 5px;
+}
+
+.tweet-text {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+/* Icons matching the image spacing [cite: 13] */
+.tweet-icons {
+    display: flex;
+    gap: 60px;
+    color: #657786;
+    font-size: 0.9rem;
+}
+
+.tweet-icons i { cursor: pointer; }
+.tweet-icons i:hover { color: #1da1f2; }
+
+/* Responsive [cite: 19, 20] */
+@media (max-width: 650px) {
+    .container {
+        margin: 0;
+        border-radius: 0;
+        width: 100%;
+    }
 }
