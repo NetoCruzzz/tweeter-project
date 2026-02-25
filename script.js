@@ -33,3 +33,14 @@ function validateInput(length) {
         tweetBtn.disabled = true;
     }
 }
+
+// Function to toggle heart icon state
+const heartIcon = document.querySelector('.fa-heart');
+
+heartIcon.addEventListener('click', () => {
+    // Toggle between regular (outline) and solid
+    heartIcon.classList.toggle('far');
+    heartIcon.classList.toggle('fas');
+    // Toggle a custom class for the red color
+    heartIcon.classList.toggle('heart-active');
+});

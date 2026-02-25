@@ -137,4 +137,9 @@ textarea {
         border-radius: 0;
         width: 100%;
     }
+
+    /* Styling for the heart when clicked */
+.heart-active {
+    color: #e0245e !important; /* Tweeter's specific red color */
+}
 }
