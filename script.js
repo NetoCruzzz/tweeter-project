@@ -1,35 +1,28 @@
-// Part 3: Dynamic Content [cite: 21]
-const tweetArea = document.getElementById('tweet-text');
-const tweetBtn = document.getElementById('tweet-btn');
-const charLabel = document.getElementById('char-count');
-const MAX_CHARS = 160; // [cite: 23]
+const tweetInput = document.getElementById("tweetInput");
+const charCount = document.getElementById("charCount");
+const tweetBtn = document.getElementById("tweetBtn");
 
-// Function called every time user enters text [cite: 29]
-tweetArea.addEventListener('input', () => {
-    const remaining = MAX_CHARS - tweetArea.value.length;
-    
-    // Update label [cite: 31]
-    updateLabel(remaining);
-    
-    // Validate input [cite: 22]
-    validateInput(tweetArea.value.length);
-});
+const maxChars = 160;
 
-function updateLabel(count) {
-    charLabel.textContent = `${count} characters remaining`; // [cite: 29]
-    
-    if (count < 0) {
-        charLabel.style.color = 'red';
+function updateCharCount() {
+    let remaining = maxChars - tweetInput.value.length;
+    charCount.textContent = remaining + " characters remaining";
+
+    if (remaining < 0) {
+        charCount.textContent = "Character limit exceeded! (160 max)";
+        charCount.style.color = "red";
+        tweetBtn.disabled = true;
     } else {
-        charLabel.style.color = '#657786';
+        charCount.style.color = "black";
+        tweetBtn.disabled = false;
     }
 }
 
-function validateInput(length) {
-    // Enforce 160-character limit and disable button if exceeded [cite: 23, 26]
-    if (length > 0 && length <= MAX_CHARS) {
-        tweetBtn.disabled = false;
-    } else {
+function validateTweet() {
+    if (tweetInput.value.length > maxChars) {
         tweetBtn.disabled = true;
     }
 }
+
+tweetInput.addEventListener("input", updateCharCount);
+tweetBtn.addEventListener("click", validateTweet);
