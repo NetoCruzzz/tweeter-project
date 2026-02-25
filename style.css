@@ -140,7 +140,7 @@ textarea {
 
     /* Styling for the heart when clicked */
 .heart-active {
-    color: #e0245e !important; /* RED COLOR, Page just needed to refresh ! But it did work !! */
+    color: #e0245e !important; /* RED COLOR, It's weird, works on my phone but not on my pc */
     transition: transform 0.2s ease; /* Tried to add animation but honestly, I don't think it worked :(( */
     transform: scale(1.2);
 }
