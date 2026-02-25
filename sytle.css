@@ -1,120 +1,104 @@
-body {
+/* Part 2: Styling and Responsiveness [cite: 14, 15] */
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #e6f4ff;
 }
 
-/* NAVBAR */
+body {
+    background-color: white; /* [cite: 15] */
+}
+
+/* 100% Viewport Width Nav [cite: 16] */
 .navbar {
     width: 100%;
-    background-color: #1da1f2;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-}
-
-.logo-circle {
-    width: 35px;
-    height: 35px;
+    padding: 15px;
     background-color: white;
-    border-radius: 50%;
-    margin-right: 10px;
+    border-bottom: 1px solid #e1e8ed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1da1f2; /* Light blue [cite: 15] */
+    font-size: 1.5rem;
+    position: sticky;
+    top: 0;
 }
 
-/* MAIN CONTAINER */
+.navbar i { margin-right: 10px; }
+
 .container {
     max-width: 600px;
-    margin: 30px auto;
-    padding: 20px;
+    margin: 20px auto;
+    padding: 10px; /* [cite: 17] */
 }
 
-/* PROFILE PIC */
-.profile-pic {
-    width: 60px;
-    height: 60px;
-    background-color: gray;
+.tweet-input-card, .sample-tweet {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+/* Gray circle photo holder [cite: 10] */
+.profile-photo {
+    width: 50px;
+    height: 50px;
+    background-color: #ccd6dd;
     border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.input-section { flex-grow: 1; }
+
+textarea {
+    width: 100%;
+    border: none;
+    font-size: 1.2rem;
+    resize: none;
+    outline: none;
     margin-bottom: 10px;
 }
 
-.profile-pic.small {
-    width: 45px;
-    height: 45px;
-}
-
-/* TWEET BOX */
-.tweet-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 30px;
+.input-controls {
     display: flex;
-    flex-direction: column;
-}
-
-textarea {
-    resize: none;
-    height: 100px;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-}
-
-.tweet-controls {
-    display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    border-top: 1px solid #e1e8ed;
+    padding-top: 10px;
 }
 
-button {
+#char-count {
+    margin-right: 15px;
+    font-size: 0.9rem;
+    color: #657786;
+}
+
+/* Rounded button with states [cite: 12, 18] */
+#tweet-btn {
     background-color: #1da1f2;
     color: white;
     border: none;
-    padding: 8px 18px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-button:hover {
-    background-color: #0d8ddb;
-}
+#tweet-btn:hover { background-color: #1a91da; }
+#tweet-btn:active { transform: scale(0.95); }
+#tweet-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-button:active {
-    transform: scale(0.95);
-}
-
-/* TWEET DISPLAY */
-.tweet {
+/* Icons [cite: 13] */
+.tweet-icons {
     display: flex;
-    gap: 15px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 15px;
-}
-
-.tweet-content span {
-    color: gray;
-    font-weight: normal;
-}
-
-.icons {
+    justify-content: space-between;
+    max-width: 300px;
     margin-top: 10px;
-    display: flex;
-    gap: 20px;
-    color: #1da1f2;
+    color: #657786;
 }
 
-/* RESPONSIVE */
+/* Responsive Media Query [cite: 19, 20] */
 @media (max-width: 600px) {
-    .container {
-        margin: 10px;
-        padding: 10px;
-    }
-
-    textarea {
-        height: 80px;
-    }
+    .container { width: 100%; }
 }
