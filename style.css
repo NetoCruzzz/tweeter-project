@@ -94,7 +94,7 @@ textarea {
 #tweet-btn:hover { background-color: #1a91da; }
 #tweet-btn:disabled { opacity: 0.5; }
 
-/* Sample Tweet Styling */
+/* Tweet Styling */
 .sample-tweet {
     padding: 20px;
     display: flex;
@@ -119,7 +119,7 @@ textarea {
     margin-bottom: 15px;
 }
 
-/* Icons matching the image spacing [cite: 13] */
+/* Icons image spacing */
 .tweet-icons {
     display: flex;
     gap: 60px;
@@ -130,7 +130,7 @@ textarea {
 .tweet-icons i { cursor: pointer; }
 .tweet-icons i:hover { color: #1da1f2; }
 
-/* Responsive [cite: 19, 20] */
+/* Responsve */
 @media (max-width: 650px) {
     .container {
         margin: 0;
@@ -140,8 +140,8 @@ textarea {
 
     /* Styling for the heart when clicked */
 .heart-active {
-    color: #e0245e !important; /* Tweeter's specific red color */
-    transition: transform 0.2s ease; /* Adds the "pop" animation */
+    color: #e0245e !important; /* RED COLOR, Page just needed to refresh ! But it did work !! */
+    transition: transform 0.2s ease; /* Tried to add animation but honestly, I don't think it worked :(( */
     transform: scale(1.2);
 }
 }
