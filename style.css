@@ -141,5 +141,7 @@ textarea {
     /* Styling for the heart when clicked */
 .heart-active {
     color: #e0245e !important; /* Tweeter's specific red color */
+    transition: transform 0.2s ease; /* Adds the "pop" animation */
+    transform: scale(1.2);
 }
 }
